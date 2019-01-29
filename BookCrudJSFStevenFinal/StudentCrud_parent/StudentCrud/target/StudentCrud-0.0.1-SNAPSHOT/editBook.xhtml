@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<meta charset="utf-8" name="viewport"
+	content="width-device-widht,initial-scale-1"
+	http-equiv="X-UA-Compatible" />
+
+<h:head>
+	<title>Edit Book</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+		<div class="content">
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Book</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="username" class="control-label col-sm-4">User Name:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="name-id" value="#{bookRecord.name}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="writer" class="control-label col-sm-4">Writer:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="writer-id" value="#{bookRecord.writer}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="quantity" class="control-label col-sm-4">Current Quantity:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:outputText id="quantity-idview" value="#{bookRecord.quantity}" class ="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="quantity" class="control-label col-sm-4">New Quantity:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="quantity-id" value="#{bookRecord.quantity}" class="form-control"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{bookBean.updateBookDetails(bookRecord)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+        </div>
+    </h:body>
+</html>

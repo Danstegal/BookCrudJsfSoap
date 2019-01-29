@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+.content{
+	margin:auto;
+	text-align:center;
+	width:90%;
+}
+.btnWidth{
+	width: 80px;
+}
+.buttonBlue {background-color: #1B0060;
+  border: none;
+  color: white;
+  padding: 15px 33px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px 10px 10px 10px;
+  
+  }
+.buttonBlue2 {background-color: #0000ff;
+  border: none;
+  color: white;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px 10px 10px 10px;
+  
+  }
+  
+.buttonRed {background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px 10px 10px 10px;
+  
+  }
+  
+  
+  table.comicBlue {
+  
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  border: 2px solid #1B0060;
+  background-color: #EEEEEE;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+table.comicBlue td, table.comicBlue th {
+  border: 2px solid #1B0060;
+  padding: 3px 2px;
+}
+table.comicBlue tbody td {
+	
+  font-size: 20px;
+  font-weight: bold;
+}
+table.comicBlue tr:nth-child(even) {
+	
+  background: #DDDAFF;
+}
+table.comicBlue thead {
+  background: #1A005E;
+  background: -moz-linear-gradient(top, #534086 0%, #31196e 66%, #1A005E 100%);
+  background: -webkit-linear-gradient(top, #534086 0%, #31196e 66%, #1A005E 100%);
+  background: linear-gradient(to bottom, #534086 0%, #31196e 66%, #1A005E 100%);
+  border-bottom: 1px solid #444444;
+}
+table.comicBlue thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+table.comicBlue thead th:first-child {
+  border-left: none;
+}
+
+table.comicBlue tfoot td {
+  font-size: 21px;
+}

@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<meta charset="utf-8" name="viewport"
+	content="width-device-widht,initial-scale-1"
+	http-equiv="X-UA-Compatible" />
+
+<h:head>
+	<title>Create Student</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+	<div class="content">
+	<h:form id="createStudent" class="form-horizontal">
+		<div class="form-group">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h2>Create Student</h2>
+		</div>
+		</div>
+		
+		<hr />
+		
+		<div class="form-group">	
+			<h:outputLabel for="name" class="control-label col-sm-4">User Name: </h:outputLabel>
+			<div class="col-sm-4">
+			<h:inputText id="name" value="#{studentBean.student.name}" 
+			class="form-control" validateMessage="User name is required"  a:placeholder="Enter User Name">
+				<f:validateRequired/>
+			</h:inputText>
+		</div>
+		</div>
+		
+		<div class="form-group">	
+			<h:outputLabel for="email" class="control-label col-sm-4">User Email: </h:outputLabel>
+			<div class="col-sm-4">
+			<h:inputText id="email" value="#{studentBean.student.email}" 
+			class="form-control" validateMessage="User email is required" a:placeholder="Enter Email">
+				<f:validateRequired/>
+			</h:inputText>
+		</div>
+		</div>
+		
+		<div class="form-group">	
+			<h:outputLabel for="password" class="control-label col-sm-4">User Password: </h:outputLabel>
+			<div class="col-sm-4">
+			<h:inputSecret id="password" value="#{studentBean.student.password}" 
+			class="form-control" validateMessage="User password is required" a:placeholder="Enter Password">
+				<f:validateRequired/>
+			</h:inputSecret>
+		</div>
+		</div>
+		
+		<div class="form-group">	
+			<h:outputLabel for="gender" class="control-label col-sm-4">User Gender </h:outputLabel>
+				<div class="col-sm-4">
+ 		<h:selectOneMenu id="gender" value="#{studentBean.student.gender}" class="form-control">
+				<f:selectItem itemLabel="Select gender" itemValue="" />
+				<f:selectItem itemLabel="Female" itemValue="F" />
+				<f:selectItem itemLabel="Male" itemValue="M" />
+			</h:selectOneMenu>
+			</div>
+		</div>
+		
+		<div class="form-group">	
+			<h:outputLabel for="address" class="control-label col-sm-4">User Address: </h:outputLabel>
+			<div class="col-sm-4">
+			<h:inputTextarea id="address" value="#{studentBean.student.address}" cols="50" rows="5" 
+			class="form-control" validateMessage="User address is required"  a:placeholder="Enter Address">
+				<f:validateRequired/>
+			</h:inputTextarea>
+		</div>
+		</div>
+		
+		<div class="form-group">	
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<div class="col-sm-2">
+					<h:commandButton value="Save" 
+					action="#{studentBean.saveStudent}" 
+					class="btn btn-succes btnWidth" />
+		
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2">
+			<h:link outcome="studentList" value="View Students Record List"
+				class="btn btn-primary"/>
+				</div>
+			</div>
+			</div>
+			
+    	  </h:form>
+    	  </div>
+</h:body>
+
+</html>
